@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="[ flex ]">
+    <section class="[ side-form ] [ bg-primary color-white ]">
+        <h1 class="[ text-center ]">RECETARIO</h1>
+        <form class="[ flow ]">
+            <div class="[ form-group ] [ flow ]">
+                <label for="title">Nombre</label>
+                <input type="text" name="title" class="[ form-control ] [ color-gray ]"/>
+            </div>
+            <div class="[ form-group ] [ flow ]">
+                <label for="img_url">URL Imagen</label>
+                <input type="text" name="img_url" class="[ form-control ] [ color-gray ]"/>
+            </div>
+            <div class="[ form-group ] [ flow ]">
+                <label for="description">Descripción</label>
+                <textarea name="description" class="[ form-control ] [ color-gray ]" rows="5"></textarea>
+            </div>
+            <div class="[ form-group ] [ flow ]">
+                <label for="title">Agregar ingrediente</label>
+                <div class="input-group">
+                    <input type="text" id="ingredient-name" class="[ form-control ] [ color-gray ]"/>
+                    <button class="btn" type="button" data-state="white">+</button>
+                </div>
+            </div>
+            <div>
+                <ul id="ingredient-temp-list" class="[ ing-list ] ">
+                    <!-- <li class="[ bg-white color-gray ]">
+                        Ingrediente 1
+                        <button class="close" type="button" >X</button>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="[ form-group ]">
+                <button class="btn" type="submit" data-state="secondary">GUARDAR</button>
+            </div>
+        </form>
+    </section>
+    <section id="view" class="[ main-content ] [ flow ]">
+        <!-- <h1 class="[ color-primary ] [ text-center ]">Listado de recetas</h1>
+
+        <div class="[ row ] [ flex ]" data-state="wrap">
+            <div class="[ col ]">
+                <div class="[ card ] [ bg-secondary color-white ] [ radius ]">
+                    <img src="https:\\picsum.photos/800" alt="">
+                    <div class="[ flow ]">
+                        <h5>Title</h5>
+                        <button class="[ btn ]" data-state="warning">Ver</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <h1 class="[ color-primary ] [ text-center ]">Receta</h1>
+
+        <div class="[ recipe ] [ flex ]">
+            <div class="recipe-img">
+                <img src="https:\\picsum.photos/800" alt="">
+            </div>
+            <div class="[ recipe-info ] [ flow ]">
+                <h2>Title</h2>
+                <div class="[ text-justify ]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat natus voluptates facere? Consequatur atque repellendus error tempora itaque! Sunt rerum ipsum explicabo corrupti neque aliquid eligendi qui inventore reiciendis impedit!</div>
+                <h5>Ingredientes</h5>
+                <ul class="[ recipe-ing ] [ flex ]" data-state="wrap">
+                    <li>Ingrediente 1</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-right">
+            <button class="[ btn ]" data-state="warning">Volver al listado</button>
+        </div> -->
+    </section>
+</body>
+</html>

@@ -7,9 +7,9 @@
     --color-gray: #7A7A7A;
     --color-gray-darker: #4e4e4e;
     --color-white: #FFFFFF;
-    --color-white-darker: #c5c5c5;
+    --color-white-darker: #e4e4e4;
     --color-warning: #FFB30D;
-    --color-warning-darker: #be8811;
+    --color-warning-darker: #e09900;
 
     --color-dark: #181818;
 
@@ -99,12 +99,20 @@ textarea {
     border-radius: var(--radius-size, 0.5rem);
 }
 
+.shadow {
+    box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.25);
+}
+
 .flex {
     display: flex;
 }
 
 .flex[data-state~="wrap"] {
     flex-wrap: wrap;
+}
+
+.flex[data-state~="justify-between"] {
+    justify-content: space-between;
 }
 
 .color-primary {
@@ -254,32 +262,43 @@ textarea {
 }
 
 .card {
-    box-shadow: 4px 4px 10px var(--color-primary-darker);
     overflow: hidden;
+    opacity: 1;
+    transition: opacity ease-out 150ms;
 }
 
 .card > * + * {
     padding: 1rem;
 }
 
-.recipe-img {
-    width: 30%;
+.recipe-img { 
+    display: flex;
+    align-items: center;
+    max-width: 30%;
 }
 
 .recipe-info {
-    width: 70%;
-    padding-left: 1em;
+    flex: 1 1 0;
+    padding: 1em;
+}
+
+.recipe-info > h2 {
+    border-bottom: solid 8px var(--color-secondary);
 }
 
 .recipe-ing {
     gap: 0.25em;
 }
 
-.recipe-ing > *::after {
+.recipe-ing > :not(:last-child)::after {
     content: ",";
 }
 
 /*****EXCEPTIONS*****/
+.card[data-state="hide"] {
+    opacity: 0;
+}
+
 .btn[data-state="primary"] {
     --btn-base-font-color: var(--color-white);
     --btn-base-bg-color: var(--color-primary);
@@ -311,6 +330,6 @@ textarea {
 .btn[data-state="warning"] {
     --btn-base-font-color: var(--color-dark);
     --btn-base-bg-color: var(--color-warning);
-    --btn-altern-font-color: var(--color-white);
+    --btn-altern-font-color: var(--color-dark);
     --btn-altern-bg-color: var(--color-warning-darker);
 }
